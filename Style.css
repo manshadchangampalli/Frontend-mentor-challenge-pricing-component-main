@@ -1,0 +1,344 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+  color: hsl(227, 35%, 25%);
+}
+body {
+  background-color: hsl(0, 0%, 99%);
+}
+.main {
+  margin: 0;
+  width: 100%;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem 0;
+}
+.background-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -2;
+  transform: translateY(-80px);
+}
+.heading {
+  font-family: "Manrope", sans-serif;
+  text-align: center;
+  color: hsl(227, 35%, 25%);
+  position: relative;
+  background-repeat: no-repeat;
+}
+.heading h1 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.heading p {
+  font-size: 0.7rem;
+}
+.box {
+  width: 28rem;
+  margin-top: 3.5rem;
+  border-radius: 10px;
+  box-shadow: 7px 7px 15px rgb(90 90 90 / 40%);
+  height: 20rem;
+  background-color: rgb(255, 255, 255);
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+.backgraound-icon svg {
+    right: 71px;
+    z-index: -1;
+    transform: scale(0.7);
+    top: -38px;
+    position: absolute;
+}
+.box .inbox1 {
+  width: 60%;
+  height: 25%;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.box .inbox1-2 span {
+  font-size: 15px;
+  font-weight: 500;
+}
+.box .inbox1-2 p {
+  font-size: 25px;
+  font-weight: bolder;
+}
+.box .inbox2 {
+  width: 100%;
+  height: 20%;
+  display: grid;
+  place-items: center;
+}
+.box .inbox2 input {
+  width: 100%;
+  -webkit-appearance: none;
+  outline: none;
+  background-color: hsl(224, 65%, 95%);
+  border-radius: 25px;
+}
+
+.box .inbox3 {
+  width: 100%;
+  height: 20%;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.box .inbox4 {
+  width: 100%;
+  height: 35%;
+  margin: 0;
+  display: flex;
+  border-top: 1px solid #eee;
+}
+.box .inbox4 .sec1 {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  justify-content: center;
+  align-items: end;
+}
+.box .inbox4 .sec1 p {
+  font-size: 13px;
+}
+.box .inbox4 .sec1 span svg {
+  margin-right: 10px;
+  transform: scale(1.5);
+}
+.box .inbox4 .sec2 {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.box .inbox4 .sec2 button {
+  padding: 0.5rem 2rem;
+  background-color: hsl(227, 35%, 25%);
+  color: white;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-size: 12px;
+  border-radius: 20px;
+}
+.inbox3 p {
+  font-size: 12px;
+  font-weight: 600;
+  margin-right: 10px;
+}
+.inbox3 .discount span {
+  font-size: 10px;
+  color: hsl(15, 100%, 70%);
+  padding: 2px 4px;
+  border-radius: 5px;
+  font-weight: 600;
+  background-color: hsl(14, 92%, 95%);
+  display: inline;
+}
+/* checkbox css */
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: hsl(223, 50%, 87%);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 17px;
+  left: 3px;
+  bottom: 2px;
+  background-color: hsl(0, 0%, 100%);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: hsl(174, 86%, 45%);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px hsl(174, 86%, 45%);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(18px);
+  -ms-transform: translateX(18px);
+  transform: translateX(18px);
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .inbox2 input {
+    overflow: visible;
+    width: 100%;
+    -webkit-appearance: none;
+  }
+
+  .inbox2 input::-webkit-slider-runnable-track {
+    height: 10px;
+    -webkit-appearance: none;
+    margin-top: 1px;
+  }
+  .inbox2 input::-webkit-slider-thumb:active {
+    background-color: hsl(174, 93%, 38%);
+  }
+  .inbox2 input::-webkit-slider-thumb {
+    width: 40px;
+    -webkit-appearance: none;
+    height: 40px;
+    cursor: pointer;
+    background: hsl(174, 86%, 45%);
+    transform: translateY(-15px);
+    border-radius: 100%;
+    background-image: url(./images/icon-slider.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: 0px 15px 26px 7px hsla(174, 86%, 45%, 0.41);
+  }
+}
+
+/* for responsive */ /* for responsive */ /* for responsive */ /* for responsive */
+
+@media only screen and (max-width: 470px) {
+  .heading h1 {
+    font-size: 1rem;
+  }
+  .heading p {
+    font-size: 0.5rem;
+  }
+  .box {
+    width: 90%;
+    padding: 1rem;
+    height: auto;
+  }
+  .box .inbox4 {
+    width: 100%;
+    align-items: center;
+    padding: 1rem;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .box .inbox4 .sec1 {
+    width: auto;
+    display: grid;
+    text-align: start;
+    place-items: center;
+    margin: 20px 0;
+  }
+  .box .inbox4 .sec1 p {
+    margin: 10px 0;
+  }
+  .box .inbox4 .sec2 {
+    width: 100%;
+    justify-content: center;
+  }
+  /* .box .inbox4 .sec2 button{
+        
+    } */
+  .box .inbox3 {
+    padding: 15px 0;
+    justify-content: center;
+    
+  }
+  .backgraound-icon svg {
+    right: 27px;
+    z-index: -1;
+    transform: scale(0.5);
+    top: -38px;
+    position: absolute;
+}
+  .box .inbox3 p{
+    font-size: 10px;
+  }
+  .inbox3 .discount span {
+    display: none;
+  }
+  .inbox3 .discount::after {
+    content: "-25%";
+    font-size: 10px;
+    color: hsl(15, 100%, 70%);
+    padding: 2px 4px;
+    border-radius: 5px;
+    font-weight: 600;
+    background-color: hsl(14, 92%, 95%);
+  }
+
+.box .inbox1{
+order: 1;
+width: 100%;
+display: flex;
+justify-content: center;
+margin: 10px 0;
+}
+.inbox1-2{
+order: 3;
+width: 100%;
+margin: 10px 0;
+display: flex;
+justify-content: center;
+}
+.inbox2{
+order: 2;
+margin: 30px 0;
+width: 100%;
+
+}
+.inbox3{
+order: 4;
+width: 100%;
+margin: 10px 0;
+display: flex;
+justify-content: center;
+}.inbox4{
+order: 5;
+margin: 10px 0;
+width: 100%;
+display: flex;
+justify-content: center;
+}
+}

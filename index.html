@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="Style.css" />
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Manrope" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="background-img">
+        <img src="./images/bg-pattern.svg" alt="">
+      </div>
+      <div class="heading">
+        <div class="backgraound-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="146" height="145">
+            <g fill="none" fill-rule="evenodd" stroke="#CFD8EF">
+              <circle cx="63" cy="82" r="62.5" />
+              <circle cx="105" cy="41" r="40.5" />
+            </g>
+          </svg>
+        </div>
+        <h1>Simple, traffic-based pricing</h1>
+        <p>sign-up for our 30-day free trail. No credit card required</p>
+      </div>
+      <div class="box">
+        <div class="inbox1">
+          <h5> <span style="font-weight: bold;" id="100k">100</span>K PAGEVIEWS </h5>
+        </div>
+           <div class="inbox1-2" style="display: flex; align-items: center;"><p id="doller">$16.00</p><span>/month</span></div>
+       
+        <div class="inbox2">
+          <input id="input" type="range" min="1" max="200" value="100">
+            </div>
+        <div class="inbox3">
+          <p>Monthly Billing</p>
+            <div style="margin-right:15px;" class="checked-button">
+              <label class="switch">
+                <input type="checkbox" checked>
+                <span class="slider round"></span>
+              </label>
+            </div>
+            <p>Yearly Billing</p>
+            <p class="discount"><span>25% discount</span></p>
+        </div>
+        <div class="inbox4">
+          <div class="sec1">
+            <p><span><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8"><path fill="none" stroke="#10D8C4" stroke-width="2" d="M1 4.134l1.907 1.908L7.949 1"/></svg>  </span>    Unlimited websites</p>
+            <p><span><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8"><path fill="none" stroke="#10D8C4" stroke-width="2" d="M1 4.134l1.907 1.908L7.949 1"/></svg>  </span>    100% data ownership</p>
+            <p><span><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8"><path fill="none" stroke="#10D8C4" stroke-width="2" d="M1 4.134l1.907 1.908L7.949 1"/></svg>  </span>    Email reports</p>
+          </div>
+          <div class="sec2">
+            <button>Start my trail</button>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <script>
+      const input = document.getElementById("input");
+      const label = document.getElementById('100k');
+      const doller = document.getElementById('doller');
+      let percentage = input.value/2
+      input.style.background =  `linear-gradient(90deg ,hsl(174, 86%, 45%) ${percentage}%, hsl(224, 65%, 95%) 0)`
+      console.log(percentage);
+
+
+      input.oninput = function(){
+        label.innerHTML = input.value
+        let price =input.value*.16
+        console.log(percentage);
+         percentage = input.value/2
+        doller.innerHTML = "$"+price.toFixed(2)
+        input.style.background =  `linear-gradient(90deg ,hsl(174, 86%, 45%) ${percentage}%, hsl(224, 65%, 95%) 0)`
+
+      }
+      
+    </script>
+  </body>
+</html> 
